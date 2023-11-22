@@ -8,12 +8,14 @@ enum ROUTE_TYPE {
   STAND_ALONE = 'STAND_ALONE',
   NOTES = 'NOTES',
   DIRECTIVE_COMPOSITION = 'DIRECTIVE_COMPOSITION',
+  IMAGE_DIRECTIVE = 'IMAGE_DIRECTIVE',
 };
 
 const ROUTE_MAP = new Map<string, ROUTE_TYPE>([
   ['/standalone', ROUTE_TYPE.STAND_ALONE],
   ['/directive', ROUTE_TYPE.DIRECTIVE_COMPOSITION],
   ['/notes', ROUTE_TYPE.NOTES],
+  ['/image-directive', ROUTE_TYPE.IMAGE_DIRECTIVE],
 ]);
 
 @Component({

@@ -19,6 +19,11 @@ export const routes: Routes = [
     loadComponent: () => import('../app/directive-composition-api/directive-composition-api.component').then(m => m.DirectiveCompositionApiComponent),
     title: 'Angular 15 - Directive Composition API'
   },
+  {
+    path: 'image-directive',
+    loadComponent: () => import('../app/image-directive/image-directive.component').then(m => m.ImageDirectiveComponent),
+    title: 'Angular 15 - Image Directive'
+  },
 ];
 
 @NgModule({

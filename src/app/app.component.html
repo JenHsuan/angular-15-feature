@@ -11,6 +11,10 @@
       mat-button (click)="changeRoute('directive')">
       Directive Composition API
     </button>
+    <button [ngClass]="getRouteStyle('IMAGE_DIRECTIVE')"
+      mat-button (click)="changeRoute('image-directive')">
+      Image Directive
+    </button>
     <button [ngClass]="getRouteStyle('NOTES')"
       mat-button (click)="changeRoute('notes')">
       Notes

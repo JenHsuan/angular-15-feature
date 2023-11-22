@@ -1,0 +1,27 @@
+.description-container {
+  width: 40em;
+}
+
+.lcp-container {
+  font-size: 1.2em;
+  font-family: audrielle-no1, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  .content {
+    width: 40em;
+    margin: 0 auto;
+  }
+  li {
+    width: 70em;
+    margin: 0 auto;
+    img {
+      width: 70em;
+    }
+  }
+}
+
+.demo-container {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

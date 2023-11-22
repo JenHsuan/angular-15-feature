@@ -38,7 +38,8 @@ export class DirectiveCompositionApiComponent extends BaseComponent {
   }
 
   //3. Add the directive on the directive-composition-api-normal
-  <app-directive-composition-api-normal appDirectiveCompositionApiDirectiveBgColor bgColor="red">
+  <app-directive-composition-api-normal
+    appDirectiveCompositionApiDirectiveBgColor bgColor="red">
   </app-directive-composition-api-normal>
   `;
 
