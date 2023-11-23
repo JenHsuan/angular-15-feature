@@ -14,7 +14,7 @@ export default class RouteUnwrapDefaultComponent extends BaseComponent {
   //The oririnal way to add a new route
   {
     path: 'route-unwrap',
-    loadComponent: () => import('../app/route-unwrap-default/route-unwrap-default.component')
+    loadComponent: () => import('../app/route-unwrap-default.component')
                           .then(m => m.RouteUnwrapDefaultComponent),
     title: 'Angular 15 - Route Unwrap Default'
   },
@@ -28,7 +28,7 @@ export default class RouteUnwrapDefaultComponent extends BaseComponent {
 
   {
     path: 'route-unwrap',
-    loadComponent: () => import('../app/route-unwrap-default/route-unwrap-default.component'),
+    loadComponent: () => import('../app/route-unwrap-default.component'),
     title: 'Angular 15 - Route Unwrap Default'
   },
   `;

@@ -53,7 +53,7 @@ export class DirectiveCompositionApiComponent extends BaseComponent {
   import { Component } from '@angular/core';
   import { CommonModule } from '@angular/common';
   import { DirectiveCompositionApiDirectiveBgColorDirective }
-  from '../directive-composition-api-directive-bg-color/directive-composition-api-directive-bg-color.directive';
+  from '../directive-composition-api-directive-bg-color.directive';
 
   @Component({
     selector: 'app-directive-composition-api-applied',

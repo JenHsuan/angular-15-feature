@@ -32,7 +32,8 @@ export class StandAloneComponent extends BaseComponent {
     //lazy loading
     {
       path: 'standalone',
-      loadComponent: () => import('../app/stand-alone/stand-alone.component').then(m => m.StandAloneComponent)
+      loadComponent: () => import('../app/stand-alone/stand-alone.component')
+                             .then(m => m.StandAloneComponent)
     },
   ];
 

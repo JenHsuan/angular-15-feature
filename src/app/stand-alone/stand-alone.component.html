@@ -1,5 +1,7 @@
 <div class="base-container">
-  <div class="title">Description</div>
+  <div class="title">Stand-alone component</div>
+  
+  <div class="title">1. Description</div>
   <div class="description-container">
     <div>
       In Angular 15, the stand-alone component is out of the developer view. As we mentioned in 
@@ -14,26 +16,26 @@
     </ol>
   </div>
 
-  <div class="title">How to Create a stand-alone component using CLI?</div>
+  <div class="title">2. How to Create a stand-alone component using CLI?</div>
   <div class="content-container">
     <code [innerHTML]="escapeHtml(stanaloneInstruction)"></code>
   </div>
 
-  <div class="title">Code for creating new stand-alone component</div>
+  <div class="title">3. Code for creating new stand-alone component</div>
   <div class="content-container">
     <pre>
       <code [innerHTML]="escapeHtml(code)"></code>
     </pre>
   </div>
 
-  <div class="title">Code for remove app.module.ts</div>
+  <div class="title">4. Code for remove app.module.ts</div>
   <div class="content-container">
     <pre>
       <code [innerHTML]="escapeHtml(removeModuleCode)"></code>
     </pre>
   </div>
 
-  <div class="title">Demo</div>
+  <div class="title">5. Demo</div>
   <div class="demo-container"> 
     <ng-container *ngFor="let index of [1, 2, 3, 4, 5]">
       <app-stand-alone-item [index]="index"></app-stand-alone-item>

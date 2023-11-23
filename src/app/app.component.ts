@@ -37,7 +37,8 @@ const ROUTE_MAP = new Map<string, ROUTE_TYPE>([
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'Notes of Angular v15 (updated at 2023/11/23)';
+  title = 'Notes of Angular v15';
+  updateTime = '2023/11/23';
   selectedRoute = ROUTE_TYPE.STAND_ALONE;
   route: string;
 
