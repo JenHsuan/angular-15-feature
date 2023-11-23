@@ -17,11 +17,14 @@
       font-size: .9em;
       top: calc(95% - 4em);
       position: absolute;
-      margin: 0 .2em 0 0;
+      margin: 0 .2em;
       text-align: center;
       span {
         margin-right: 1em;
       }
+      div {
+        margin-bottom: .3em;
+      };
     }
 
     .tabs {
@@ -57,9 +60,13 @@
       &.current {
         color: #fff;
         background-color: #2b2828;
+        &:hover {
+          color: #fff;
+        }
       }
       &:hover {
         color: #000;
+        font-weight: 500;
       }
     }
       
