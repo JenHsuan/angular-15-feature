@@ -16,5 +16,4 @@ import { DirectiveCompositionApiDirectiveBgColorDirective } from '../directive-c
   styleUrls: ['./directive-composition-api-applied.component.scss']
 })
 export class DirectiveCompositionApiAppliedComponent {
-
 }

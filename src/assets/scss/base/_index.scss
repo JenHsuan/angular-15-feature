@@ -3,7 +3,7 @@
     display: flex;
     justify-content: center;
     font-size: 1.2em;
-    margin-bottom: 4em;
+    margin-bottom: 1em;
     font-family: audrielle-no1, sans-serif;
     font-style: normal;
     font-weight: 400;
@@ -21,11 +21,30 @@
     font-weight: 400;
   }
 
+  .debugging-container {
+    font-size: 1.2em;
+    font-family: audrielle-no1, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    .content {
+      width: 40em;
+      margin: 0 auto;
+    }
+    li {
+      width: 70em;
+      margin: 0 auto;
+      img {
+        width: 70em;
+      }
+    }
+  }
+
   .demo-container {
     width: 100%;
     display: flex;
     justify-content: center;
     margin: 0 auto;
+    margin-bottom: 1em;
   }
   
   .title {

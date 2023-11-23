@@ -5,7 +5,7 @@
   <div class="tabs">
     <button [ngClass]="getRouteStyle('STAND_ALONE')"
       mat-button (click)="changeRoute('standalone')">
-      Stand-alone component
+      Stand-alone Component
     </button>
     <button [ngClass]="getRouteStyle('DIRECTIVE_COMPOSITION')"
       mat-button (click)="changeRoute('directive')">
@@ -14,6 +14,26 @@
     <button [ngClass]="getRouteStyle('IMAGE_DIRECTIVE')"
       mat-button (click)="changeRoute('image-directive')">
       Image Directive
+    </button>
+    <button [ngClass]="getRouteStyle('ROUTE_UNWRAP_DEFAULT')"
+      mat-button (click)="changeRoute('route-unwrap')">
+      Route Remove Default Component
+    </button>
+    <button [ngClass]="getRouteStyle('AUTHORED_CODE')"
+      mat-button (click)="changeRoute('authored-code')">
+      Debug with the Authored Code
+    </button>
+    <button [ngClass]="getRouteStyle('IGNORED_LIST')"
+      mat-button (click)="changeRoute('ignored-list')">
+      Debug with the Ignored List
+    </button>
+    <button [ngClass]="getRouteStyle('RANGE_SELECTION_SUPPORT')"
+      mat-button (click)="changeRoute('range-selection-support')">
+      Angular Material 15 - Range Selection Support
+    </button>
+    <button [ngClass]="getRouteStyle('CDK_LIST_BOX')"
+      mat-button (click)="changeRoute('cdk-list-box')">
+      Angular CDK 15 - List Box
     </button>
     <button [ngClass]="getRouteStyle('NOTES')"
       mat-button (click)="changeRoute('notes')">

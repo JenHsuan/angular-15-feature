@@ -1,0 +1,42 @@
+<div class="base-container">
+  <div class="title">Description</div>
+  <div class="description-container">
+    <div>
+      In Angular Material 15, the <b>slider component</b> supports the range selection.
+    </div>
+  </div>
+
+  <div class="title">How to use Angular Material Slider?</div>
+  <div class="content-container">
+    <pre>
+      <code [innerHTML]="escapeHtml(instruction)"></code>
+    </pre>
+  </div>
+
+  <div class="title">Demo</div>
+  <div class="demo-container">
+    <mat-slider
+      class="example-margin"
+      [disabled]="disabled"
+      [max]="max"
+      [min]="min"
+      [step]="step"
+      [discrete]="thumbLabel"
+      [showTickMarks]="showTicks">
+      <input matSliderStartThumb [(ngModel)]="startValue" #slider>
+      <input matSliderEndThumb [(ngModel)]="endValue" #slider>
+    </mat-slider>
+  </div>
+
+  <div class="title">Reference</div>
+  <div class="content-container">
+    <ul>
+      <li>
+        <a href="https://material.angular.io/components/slider/examples">
+          Slider
+        </a>
+      </li>
+    </ul>
+  </div>
+
+</div>
