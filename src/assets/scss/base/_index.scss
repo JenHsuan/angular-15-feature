@@ -52,4 +52,38 @@
     font-weight: 400;
     width: 100%;
   }
+
+  .section-icon {
+    width: 1.2em;
+    height: 1.2em;
+    line-height: 1.2em;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: rgb(232, 230, 229);
+    border: 1px solid #000;
+    transform: rotate(-90deg);
+    margin-left: 2em;
+    opacity: .2;
+    transition: transform .3s ease-in,-webkit-transform .3s ease-in,-moz-transform .3s ease-in;
+    &:hover {
+      opacity: 1;
+    }
+    &.close {
+      transform: rotate(-270deg);
+    }
+  }
+
+  .title-section {
+    visibility: visible;
+    display: block;
+    transition: transform .3s ease-in,-webkit-transform .3s ease-in,-moz-transform .3s ease-in;
+    margin-bottom: .5em;
+    &.close {
+      visibility: hidden;
+      display: none;
+    }
+  }
 }

@@ -1,69 +1,93 @@
 <div class="base-container">
   <div class="title">Angular CDK listbox</div>
-
-  <div class="title">1. Description</div>
-  <div class="description-container">
-    <div>
-      In Angular CDK 15, the <b>Listbox</b> was introduced.
-    </div>
-    <div>
-      It has the following features.
-    </div>
-    <ul>
-      <li>
-        bidi layout support
-      </li>
-      <li>
-        keyboard interaction
-      </li>
-      <li>
-        focus management
-      </li>
-    </ul>
+  <!-- title -->
+  <div [ngClass]="titleClassName" (click)="toggleTitleOpen()">
+    >
+  </div>
+  <div [ngClass]="titleSectionClassName">
+    <div class="title">1. Description</div>
+    <div class="description-container">
+      <div>
+        In Angular CDK 15, the <b>Listbox</b> was introduced.
+      </div>
+      <div>
+        It has the following features.
+      </div>
+      <ul>
+        <li>
+          bidi layout support
+        </li>
+        <li>
+          keyboard interaction
+        </li>
+        <li>
+          focus management
+        </li>
+      </ul>
+    </div>  
   </div>
 
-  <div class="title">2. How to use Angular Material Slider?</div>
-  <div class="content-container">
-    <pre>
-      <code [innerHTML]="escapeHtml(instruction)"></code>
-    </pre>
+  <!-- content -->
+  <div [ngClass]="contentClassName" (click)="toggleContentOpen()">
+    >
+  </div>
+  <div [ngClass]="contentSectionClassName">
+    <div class="title">2. How to use Angular Material Slider?</div>
+    <div class="content-container">
+      <pre>
+        <code [innerHTML]="escapeHtml(instruction)"></code>
+      </pre>
+    </div>  
   </div>
 
-  <div class="title">3. Demo</div>
-  <div class="demo-container">
-    <div class="example-listbox-container">
-      <label class="example-listbox-label" id="example-appointment-label">
-        Appointment Time
-      </label>
-      <ul cdkListbox
-        [cdkListboxValue]="appointment"
-        [cdkListboxCompareWith]="compareDate"
-        (cdkListboxValueChange)="appointment = $event.value"
-        aria-labelledby="example-appointment-label"
-        class="example-listbox">
-        <li *ngFor="let time of slots; track time"
-            [cdkOption]="time"
-            class="example-option">{{formatTime(time)}}</li>
+  <!-- demo -->
+  <div [ngClass]="demoClassName" (click)="toggleDemoOpen()">
+    >
+  </div>
+  <div [ngClass]="demoSectionClassName">
+    <div class="title">3. Demo</div>
+    <div class="demo-container">
+      <div class="example-listbox-container">
+        <label class="example-listbox-label" id="example-appointment-label">
+          Appointment Time
+        </label>
+        <ul cdkListbox
+          [cdkListboxValue]="appointment"
+          [cdkListboxCompareWith]="compareDate"
+          (cdkListboxValueChange)="appointment = $event.value"
+          aria-labelledby="example-appointment-label"
+          class="example-listbox">
+          <li *ngFor="let time of slots; track time"
+              [cdkOption]="time"
+              class="example-option">{{formatTime(time)}}</li>
+        </ul>
+      </div>
+      <p *ngIf="appointment && appointment[0]">
+        Your appointment is scheduled for <strong>{{formatAppointment() | json}}</strong>&nbsp;
+      </p>
+    </div>  
+  </div>
+
+  <!-- reference -->
+  <div [ngClass]="referenceClassName" (click)="toggleReferenceOpen()">
+    >
+  </div>
+  <div [ngClass]="referenceSectionClassName">
+    <div class="title">4. Reference</div>
+    <div class="content-container">
+      <ul>
+        <li>
+          <a href="https://material.angular.io/cdk/listbox/examples">
+            Listbox
+          </a>
+        </li>
+        <li>
+          <a href="https://fullstackladder.dev/blog/2018/01/14/angular-material-27-cdk-bidirectionality-layout/">
+            [Angular Material 完全攻略]Angular CDK(3) - Bidirectionality、Layout
+          </a>
+        </li>
       </ul>
     </div>
-    <p *ngIf="appointment && appointment[0]">
-      Your appointment is scheduled for <strong>{{formatAppointment() | json}}</strong>&nbsp;
-    </p>
   </div>
 
-  <div class="title">4. Reference</div>
-  <div class="content-container">
-    <ul>
-      <li>
-        <a href="https://material.angular.io/cdk/listbox/examples">
-          Listbox
-        </a>
-      </li>
-      <li>
-        <a href="https://fullstackladder.dev/blog/2018/01/14/angular-material-27-cdk-bidirectionality-layout/">
-          [Angular Material 完全攻略]Angular CDK(3) - Bidirectionality、Layout
-        </a>
-      </li>
-    </ul>
-  </div>
 </div>

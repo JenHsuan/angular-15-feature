@@ -1,33 +1,51 @@
 <div class="base-container">
   <div class="title">esbuild improvement</div>
   
-  <div class="title">1. Description</div>
-  <div class="description-container">
-    <div>
-      As we mentioned in 
-      <a href="https://glistening-cupcake-ead467.netlify.app">Notes of Angular v14</a>, 
-      Angular has began the experimental supports on esbuild.
+  <!-- title -->
+  <div [ngClass]="titleClassName" (click)="toggleTitleOpen()">
+    >
+  </div>
+  <div [ngClass]="titleSectionClassName">
+    <div class="title">1. Description</div>
+    <div class="description-container">
+      <div>
+        As we mentioned in 
+        <a href="https://glistening-cupcake-ead467.netlify.app">Notes of Angular v14</a>, 
+        Angular has began the experimental supports on esbuild.
+      </div>
+      <div>
+          In Angular 15, there are a few new supports for the esbuild.
+      </div>
+      <ol>
+        <li>Experimental SASS</li>
+        <li>SVG template</li>
+        <li>File replacement</li>
+        <li>ng build --watch</li>
+      </ol>
     </div>
-    <div>
-        In Angular 15, there are a few new supports for the esbuild.
-    </div>
-    <ol>
-      <li>Experimental SASS</li>
-      <li>SVG template</li>
-      <li>File replacement</li>
-      <li>ng build --watch</li>
-    </ol>
   </div>
 
-  <div class="title">2. How to use?</div>
-  <div class="content-container">
-    <pre>
-      <code [innerHTML]="steps"></code>
-    </pre>
+  <!-- content -->
+  <div [ngClass]="contentClassName" (click)="toggleContentOpen()">
+    >
+  </div>
+  <div [ngClass]="contentSectionClassName">
+    <div class="title">2. How to use?</div>
+    <div class="content-container">
+      <pre>
+        <code [innerHTML]="steps"></code>
+      </pre>
+    </div>
   </div>
 
-  <div class="title">3. Demo</div>
-  <div class="demo-container">
-    <img src="../../assets/image/esbuild-watch-demo.png" alt="">
+  <!-- demo -->
+  <div [ngClass]="demoClassName" (click)="toggleDemoOpen()">
+    >
+  </div>
+  <div [ngClass]="demoSectionClassName">
+    <div class="title">3. Demo</div>
+    <div class="demo-container">
+      <img src="../../assets/image/esbuild-watch-demo.png" alt="">
+    </div>
   </div>
 </div>

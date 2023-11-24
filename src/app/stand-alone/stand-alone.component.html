@@ -1,44 +1,59 @@
 <div class="base-container">
   <div class="title">Stand-alone component</div>
-  
-  <div class="title">1. Description</div>
-  <div class="description-container">
-    <div>
-      In Angular 15, the stand-alone component is out of the developer view. As we mentioned in 
-      <a href="https://glistening-cupcake-ead467.netlify.app">Notes of Angular v14</a>, 
-      it has the following advantages.
+  <div [ngClass]="titleClassName" (click)="toggleTitleOpen()">
+    >
+  </div>
+  <div [ngClass]="titleSectionClassName">
+    <div class="title">1. Description</div>
+    <div class="description-container">
+      <div>
+        In Angular 15, the stand-alone component is out of the developer view. As we mentioned in 
+        <a href="https://glistening-cupcake-ead467.netlify.app">Notes of Angular v14</a>, 
+        it has the following advantages.
+      </div>
+      <ol>
+        <li>For the frictionless component creation</li>
+        <li>The stand-alone component can simplify learning journey</li>
+        <li>The stand-alone component can manage dependencies in Component stead of NgModule()</li>
+        <li>The stand-alone component can be lazy loaded</li>
+      </ol>
     </div>
-    <ol>
-      <li>For the frictionless component creation</li>
-      <li>The stand-alone component can simplify learning journey</li>
-      <li>The stand-alone component can manage dependencies in Component stead of NgModule()</li>
-      <li>The stand-alone component can be lazy loaded</li>
-    </ol>
   </div>
 
-  <div class="title">2. How to Create a stand-alone component using CLI?</div>
-  <div class="content-container">
-    <code [innerHTML]="escapeHtml(stanaloneInstruction)"></code>
+  <div [ngClass]="contentClassName" (click)="toggleContentOpen()">
+    >
+  </div>
+  <div [ngClass]="contentSectionClassName">
+    <div class="title">2. How to Create a stand-alone component using CLI?</div>
+    <div class="content-container">
+      <code [innerHTML]="escapeHtml(stanaloneInstruction)"></code>
+    </div>
+
+    <div class="title">3. Code for creating new stand-alone component</div>
+    <div class="content-container">
+      <pre>
+        <code [innerHTML]="escapeHtml(code)"></code>
+      </pre>
+    </div>
+
+    <div class="title">4. Code for removing app.module.ts</div>
+    <div class="content-container">
+      <pre>
+        <code [innerHTML]="escapeHtml(removeModuleCode)"></code>
+      </pre>
+    </div>
   </div>
 
-  <div class="title">3. Code for creating new stand-alone component</div>
-  <div class="content-container">
-    <pre>
-      <code [innerHTML]="escapeHtml(code)"></code>
-    </pre>
+  <div [ngClass]="demoClassName" (click)="toggleDemoOpen()">
+    >
+  </div>
+  <div [ngClass]="demoSectionClassName">
+    <div class="title">5. Demo</div>
+    <div class="demo-container"> 
+      <ng-container *ngFor="let index of [1, 2, 3, 4, 5]">
+        <app-stand-alone-item [index]="index"></app-stand-alone-item>
+      </ng-container>
+    </div>
   </div>
 
-  <div class="title">4. Code for removing app.module.ts</div>
-  <div class="content-container">
-    <pre>
-      <code [innerHTML]="escapeHtml(removeModuleCode)"></code>
-    </pre>
-  </div>
-
-  <div class="title">5. Demo</div>
-  <div class="demo-container"> 
-    <ng-container *ngFor="let index of [1, 2, 3, 4, 5]">
-      <app-stand-alone-item [index]="index"></app-stand-alone-item>
-    </ng-container>
-  </div>
 </div>

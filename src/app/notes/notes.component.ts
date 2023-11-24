@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { BaseComponent } from '../base/base.component';
 
 @Component({
   selector: 'app-notes',
@@ -8,6 +9,22 @@ import { CommonModule } from '@angular/common';
   templateUrl: './notes.component.html',
   styleUrls: ['./notes.component.scss']
 })
-export class NotesComponent {
+export class NotesComponent extends BaseComponent {
+  instruction = `
+  //Legacy
+  @Injectable({
+    providedIn: NgModule
+  })
+  export class LoginService {
+    ...
+  }
 
+  //Angular 15
+  @Injectable({
+    providedIn: 'root'
+  })
+  export class LoginService {
+    ...
+  }
+  `;
 }

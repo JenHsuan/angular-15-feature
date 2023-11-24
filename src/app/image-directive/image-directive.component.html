@@ -1,132 +1,152 @@
 <div class="base-container">
   <div class="title">Image Directive</div>
-  <div class="title">1. Description</div>
-  <div class="description-container">
-    <div>
-      <a href="">NgOptimizedImage</a> ensures that the loading of the Largest Contentful Paint (LCP) image is is prioritized. 
-      It's developed by Angular team and the <a href="https://developer.chrome.com/blog/introducing-aurora/">Google Aurora team</a>.
+
+  <!-- title -->
+  <div [ngClass]="titleClassName" (click)="toggleTitleOpen()">
+    >
+  </div>
+  <div [ngClass]="titleSectionClassName">
+    <div class="title">1. Description</div>
+    <div class="description-container">
+      <div>
+        <a href="">NgOptimizedImage</a> ensures that the loading of the Largest Contentful Paint (LCP) image is is prioritized. 
+        It's developed by Angular team and the <a href="https://developer.chrome.com/blog/introducing-aurora/">Google Aurora team</a>.
+      </div>
+      <ol>
+        <li>Automatically setting the 
+          <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/fetchPriority">
+            fetchpriority
+          </a>
+           attribute on the img tag property (default value of <b>fetchpriority</b> is <b>auto</b>/<b>priority</b> is <b>false</b>)
+        </li>
+        <li>Lazy loading non-priority images by default (default value of <b>loading</b> is <b>lazy</b>)</li>
+        <li>Automatically generating a 
+          <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/rel/preconnect">
+            preconnect
+          </a>
+           link tag in the document head
+           <pre>
+            <code [innerHTML]="escapeHtml(preconnectCode)"></code>
+          </pre>
+        </li>
+        <li>
+          When the <b>priority</b> is <b>true</b>, the 
+          <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/rel/preload">
+            preload
+          </a>
+          link tag will be added in the document head
+          <pre>
+           <code [innerHTML]="escapeHtml(preloadCode)"></code>
+         </pre>
+        </li>
+      </ol>
+      <div>
+        <img ngSrc="1*4IBpfSE-wcflFJ7T0XW8Mg.png" width="800" height="400">
+      </div>
+    </div>  
+  </div>
+  
+  <!-- content -->
+  <div [ngClass]="contentClassName" (click)="toggleContentOpen()">
+    >
+  </div>
+  <div [ngClass]="contentSectionClassName">
+    <div class="title">2. How to use NgOptimizedImage?</div>
+    <div class="content-container">
+      <pre>
+        <code [innerHTML]="escapeHtml(code)"></code>
+      </pre>
     </div>
-    <ol>
-      <li>Automatically setting the 
-        <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/fetchPriority">
-          fetchpriority
-        </a>
-         attribute on the img tag property (default value of <b>fetchpriority</b> is <b>auto</b>/<b>priority</b> is <b>false</b>)
-      </li>
-      <li>Lazy loading non-priority images by default (default value of <b>loading</b> is <b>lazy</b>)</li>
-      <li>Automatically generating a 
-        <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/rel/preconnect">
-          preconnect
-        </a>
-         link tag in the document head
-         <pre>
-          <code [innerHTML]="escapeHtml(preconnectCode)"></code>
-        </pre>
-      </li>
-      <li>
-        When the <b>priority</b> is <b>true</b>, the 
-        <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/rel/preload">
-          preload
-        </a>
-        link tag will be added in the document head
-        <pre>
-         <code [innerHTML]="escapeHtml(preloadCode)"></code>
-       </pre>
-      </li>
-    </ol>
-    <div>
-      <img ngSrc="1*4IBpfSE-wcflFJ7T0XW8Mg.png" width="800" height="400">
+
+    <div class="title">3. Largest Contentful Paint (LCP) image</div>
+    <div class="description-container">
+      The Largest Contentful Paint (LCP) metric reports the render time of the largest image or text block visible within the viewport, relative to when the page first started loading.
+    </div>
+
+    <div class="title">4. Optimized strategies for LCP image</div>
+    <div class="description-container">
+      <ol>
+        <li>
+          Set <b>fetchPriority</b> to <b>high</b> (NgOptimizedImage: set <b>priority</b> to <b>true</b>)
+        </li>
+        <li>
+          Set <b>loading</b> to <b>auto</b> (NgOptimizedImage: set <b>loading</b> to <b>auto</b>)
+        </li>
+        <li>Set the <b>srcset</b> (NgOptimizedImage: property natively according to the <b>width</b> and <b>height</b>)</li>
+      </ol>
+    </div>
+
+    <div class="title">5. How to check if the image is FCP?</div>
+    <div class="lcp-container">
+      <div class="content"></div>
+      <ul>
+        <li>
+          <div>Use small image as the cover page (200 * 100): won't be marked as the LCP</div>
+          <img src="../../assets/image/lcp-small.png" alt="">
+        </li>
+        <li>
+          <div>Use large image as the cover page (2000 * 1000): will be marked as the LCP</div>
+          <img src="../../assets/image/lcp-large.png" alt="">
+        </li>
+      </ul>
     </div>
   </div>
 
-  <div class="title">2. How to use NgOptimizedImage?</div>
-  <div class="content-container">
-    <pre>
-      <code [innerHTML]="escapeHtml(code)"></code>
-    </pre>
+  <!-- reference -->
+  <div [ngClass]="referenceClassName" (click)="toggleReferenceOpen()">
+    >
+  </div>
+  <div [ngClass]="referenceSectionClassName">
+    <div class="title">6. Reference</div>
+    <div class="content-container">
+      <ul>
+        <li>
+          <a href="https://netbasal.com/say-goodbye-to-setters-and-getters-angulars-transform-option-for-input-values-88fd9442dcad">
+            Say Goodbye to Setters and Getters: Angular Transform Option for Input Values
+          </a>
+        </li>
+        <li>
+          <a href="https://developer.chrome.com/blog/angular-image-directive/">
+            Optimizing Images with the Angular Image Directive
+          </a>
+        </li>
+        <li>
+          <a href="https://angular.io/api/common/NgOptimizedImage">
+            NgOptimizedImage
+          </a>
+        </li>
+        <li>
+          <a href="https://www.shubo.io/responsive-image/#img-srcset-%E5%B1%AC%E6%80%A7">
+            [教學] 如何使用 img srcset 讓圖片在 RWD 網頁顯示適當解析度
+          </a>
+        </li>
+        <li>
+          <a href="https://www.shubo.io/preload-prefetch-preconnect/#preconnect">
+            [教學] Preload, Prefetch 和 Preconnect 的差異
+          </a>
+        </li>
+        <li>
+          <a href="https://web.dev/articles/lcp?hl=zh-tw#what_elements_are_considered">
+            Largest Contentful Paint (LCP)
+          </a>
+        </li>
+        <li>
+          <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/fetchPriority">
+            HTMLImageElement: fetchPriority property
+          </a>
+        </li>
+        <li>
+          <a href="https://www.hostinger.com/tutorials/largest-contentful-paint">
+            Largest Contentful Paint (LCP): What It Is and 11 Ways to Improve It 
+          </a>
+        </li>
+        <li>
+          <a href="https://www.twicpics.com/blog/how-to-find-the-lcp-element-a-complete-guide">
+            How to find the Largest Contentful Paint element? A complete guide.
+          </a>
+        </li>
+      </ul>
+    </div>    
   </div>
 
-  <div class="title">3. Largest Contentful Paint (LCP) image</div>
-  <div class="description-container">
-    The Largest Contentful Paint (LCP) metric reports the render time of the largest image or text block visible within the viewport, relative to when the page first started loading.
-  </div>
-
-  <div class="title">4. Optimized strategies for LCP image</div>
-  <div class="description-container">
-    <ol>
-      <li>
-        Set <b>fetchPriority</b> to <b>high</b> (NgOptimizedImage: set <b>priority</b> to <b>true</b>)
-      </li>
-      <li>
-        Set <b>loading</b> to <b>auto</b> (NgOptimizedImage: set <b>loading</b> to <b>auto</b>)
-      </li>
-      <li>Set the <b>srcset</b> (NgOptimizedImage: property natively according to the <b>width</b> and <b>height</b>)</li>
-    </ol>
-  </div>
-
-  <div class="title">5. How to check if the image is FCP?</div>
-  <div class="lcp-container">
-    <div class="content"></div>
-    <ul>
-      <li>
-        <div>Use small image as the cover page (200 * 100): won't be marked as the LCP</div>
-        <img src="../../assets/image/lcp-small.png" alt="">
-      </li>
-      <li>
-        <div>Use large image as the cover page (2000 * 1000): will be marked as the LCP</div>
-        <img src="../../assets/image/lcp-large.png" alt="">
-      </li>
-    </ul>
-  </div>
-
-  <div class="title">6. Reference</div>
-  <div class="content-container">
-    <ul>
-      <li>
-        <a href="https://netbasal.com/say-goodbye-to-setters-and-getters-angulars-transform-option-for-input-values-88fd9442dcad">
-          Say Goodbye to Setters and Getters: Angular Transform Option for Input Values
-        </a>
-      </li>
-      <li>
-        <a href="https://developer.chrome.com/blog/angular-image-directive/">
-          Optimizing Images with the Angular Image Directive
-        </a>
-      </li>
-      <li>
-        <a href="https://angular.io/api/common/NgOptimizedImage">
-          NgOptimizedImage
-        </a>
-      </li>
-      <li>
-        <a href="https://www.shubo.io/responsive-image/#img-srcset-%E5%B1%AC%E6%80%A7">
-          [教學] 如何使用 img srcset 讓圖片在 RWD 網頁顯示適當解析度
-        </a>
-      </li>
-      <li>
-        <a href="https://www.shubo.io/preload-prefetch-preconnect/#preconnect">
-          [教學] Preload, Prefetch 和 Preconnect 的差異
-        </a>
-      </li>
-      <li>
-        <a href="https://web.dev/articles/lcp?hl=zh-tw#what_elements_are_considered">
-          Largest Contentful Paint (LCP)
-        </a>
-      </li>
-      <li>
-        <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/fetchPriority">
-          HTMLImageElement: fetchPriority property
-        </a>
-      </li>
-      <li>
-        <a href="https://www.hostinger.com/tutorials/largest-contentful-paint">
-          Largest Contentful Paint (LCP): What It Is and 11 Ways to Improve It 
-        </a>
-      </li>
-      <li>
-        <a href="https://www.twicpics.com/blog/how-to-find-the-lcp-element-a-complete-guide">
-          How to find the Largest Contentful Paint element? A complete guide.
-        </a>
-      </li>
-    </ul>
-  </div>
 </div>

@@ -1,44 +1,62 @@
 <div class="base-container">
   <div class="title">Debug with the Authored Code</div>
 
-  <div class="title">1. Description</div>
-  <div class="description-container">
-    <div>
-      We are able to navigate to the authored code nstead of the deployed code in the source panel. (Not limited to Angular v15)
+  <!-- title -->
+  <div [ngClass]="titleClassName" (click)="toggleTitleOpen()">
+    >
+  </div>
+  <div [ngClass]="titleSectionClassName">
+    <div class="title">1. Description</div>
+    <div class="description-container">
+      <div>
+        We are able to navigate to the authored code nstead of the deployed code in the source panel. (Not limited to Angular v15)
+      </div>
     </div>
   </div>
 
-  <div class="title">2. How to navigate to the authored code from the Chrome DevTool?</div>
-  <div class="debugging-container">
-    <div class="content"></div>
-    <ol>
-      <li>
-        Open the Chrome DevTool
-      </li>
-      <li>
-        <div>Before setting, we could only navigate to the <b>deployed code</b> from the source panel</div>
-        <img src="../../assets/image/debug-before-setting.png" alt="">
-      </li>
-      <li>
-        <div>Enable navigating to the authored code (<b>DevTools > Settings > Experiments > Group sources into Authored and Deployed trees</b>)</div>
-        <img src="../../assets/image/debug-setting.png" alt="">
-      </li>
-      <li>
-        <div>After setting, we could navigate to the <b>authored code</b> from the source panel</div>
-        <img src="../../assets/image/debug-after-setting.png" alt="">
-      </li>
-    </ol>
+  <!-- content -->
+  <div [ngClass]="contentClassName" (click)="toggleContentOpen()">
+    >
+  </div>
+  <div [ngClass]="contentSectionClassName">
+    <div class="title">2. How to navigate to the authored code from the Chrome DevTool?</div>
+    <div class="debugging-container">
+      <div class="content"></div>
+      <ol>
+        <li>
+          Open the Chrome DevTool
+        </li>
+        <li>
+          <div>Before setting, we could only navigate to the <b>deployed code</b> from the source panel</div>
+          <img src="../../assets/image/debug-before-setting.png" alt="">
+        </li>
+        <li>
+          <div>Enable navigating to the authored code (<b>DevTools > Settings > Experiments > Group sources into Authored and Deployed trees</b>)</div>
+          <img src="../../assets/image/debug-setting.png" alt="">
+        </li>
+        <li>
+          <div>After setting, we could navigate to the <b>authored code</b> from the source panel</div>
+          <img src="../../assets/image/debug-after-setting.png" alt="">
+        </li>
+      </ol>
+    </div>
   </div>
 
-  <div class="title">3. Reference</div>
-  <div class="content-container">
-    <ul>
-      <li>
-        <a href="https://developer.chrome.com/blog/devtools-modern-web-debugging/">
-          Modern web debugging in Chrome DevTools
-        </a>
-      </li>
-    </ul>
+  <!-- reference -->
+  <div [ngClass]="referenceClassName" (click)="toggleReferenceOpen()">
+    >
+  </div>
+  <div [ngClass]="referenceSectionClassName">
+    <div class="title">3. Reference</div>
+    <div class="content-container">
+      <ul>
+        <li>
+          <a href="https://developer.chrome.com/blog/devtools-modern-web-debugging/">
+            Modern web debugging in Chrome DevTools
+          </a>
+        </li>
+      </ul>
+    </div>
   </div>
 
 </div>

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { BaseComponent } from '../base/base.component';
 
 @Component({
   selector: 'app-language-service-improvement',
@@ -8,6 +9,6 @@ import { CommonModule } from '@angular/common';
   templateUrl: './language-service-improvement.component.html',
   styleUrls: ['./language-service-improvement.component.scss']
 })
-export class LanguageServiceImprovementComponent {
+export class LanguageServiceImprovementComponent extends BaseComponent {
 
 }

@@ -1,52 +1,70 @@
 <div class="base-container">
   <div class="title">Directive Composistion API</div>
-  <div class="title">1. Description</div>
-  <div class="description-container">
-    <div>
-      The purpose of the directive composition API is to reuse the directive logic.
-      We no longer have to added the directive on the component to use the directive. 
+
+  <!-- title -->
+  <div [ngClass]="titleClassName" (click)="toggleTitleOpen()">
+    >
+  </div>
+  <div [ngClass]="titleSectionClassName">
+    <div class="title">1. Description</div>
+    <div class="description-container">
+      <div>
+        The purpose of the directive composition API is to reuse the directive logic.
+        We no longer have to added the directive on the component to use the directive. 
+      </div>
+      <div>
+        There are a few prerequisites.
+      </div>
+      <ol>
+        <li>The directive has to be a stand-alone directive</li>
+        <li>The component has to be a stand-alone component</li>
+      </ol>
     </div>
-    <div>
-      There are a few prerequisites.
+  </div>
+
+  <!-- content -->
+  <div [ngClass]="contentClassName" (click)="toggleContentOpen()">
+    >
+  </div>
+  <div [ngClass]="contentSectionClassName">
+    <div class="title">2. Create a simple directives (change the background color)</div>
+    <div class="content-container">
+      <pre>
+        <code [innerHTML]="escapeHtml(codeForDirective)"></code>
+      </pre>
     </div>
-    <ol>
-      <li>The directive has to be a stand-alone directive</li>
-      <li>The component has to be a stand-alone component</li>
-    </ol>
+    <div class="title">Demo</div>
+    <div class="demo-container">
+      <app-directive-composition-api-normal appDirectiveCompositionApiDirectiveBgColor bgColor="red"></app-directive-composition-api-normal>
+    </div>
+
+    <div class="title">3. Create a stand-alone component with the diretive composition API</div>
+    <div class="content-container">
+      <pre>
+        <code [innerHTML]="escapeHtml(codeForComponent)"></code>
+      </pre>
+    </div>
+
+    <div class="title">Demo</div>
+    <div class="demo-container"> 
+      <app-directive-composition-api-applied backgroundColor="red"></app-directive-composition-api-applied>
+    </div>
   </div>
 
-  <div class="title">2. Create a simple directives (change the background color)</div>
-  <div class="content-container">
-    <pre>
-      <code [innerHTML]="escapeHtml(codeForDirective)"></code>
-    </pre>
+  <!-- reference -->
+  <div [ngClass]="referenceClassName" (click)="toggleReferenceOpen()">
+    >
   </div>
-
-  <div class="title">Demo</div>
-  <div class="demo-container">
-    <app-directive-composition-api-normal appDirectiveCompositionApiDirectiveBgColor bgColor="red"></app-directive-composition-api-normal>
-  </div>
-
-  <div class="title">3. Create a stand-alone component with the diretive composition API</div>
-  <div class="content-container">
-    <pre>
-      <code [innerHTML]="escapeHtml(codeForComponent)"></code>
-    </pre>
-  </div>
-
-  <div class="title">Demo</div>
-  <div class="demo-container"> 
-    <app-directive-composition-api-applied backgroundColor="red"></app-directive-composition-api-applied>
-  </div>
-
-  <div class="title">4. Reference</div>
-  <div class="content-container">
-    <ul>
-      <li>
-        <a href="https://fullstackladder.dev/blog/2022/11/20/angular-directive-composition-api-introduction/">
-          Directive composition API 初體驗
-        </a>
-      </li>
-    </ul>
+  <div [ngClass]="referenceSectionClassName">
+    <div class="title">4. Reference</div>
+    <div class="content-container">
+      <ul>
+        <li>
+          <a href="https://fullstackladder.dev/blog/2022/11/20/angular-directive-composition-api-introduction/">
+            Directive composition API 初體驗
+          </a>
+        </li>
+      </ul>
+    </div>
   </div>
 </div>

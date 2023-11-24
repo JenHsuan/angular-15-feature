@@ -1,44 +1,68 @@
 <div class="base-container">
   <div class="title">Angular Material Slider</div>
 
-  <div class="title">1. Description</div>
-  <div class="description-container">
-    <div>
-      In Angular Material 15, the <b>slider component</b> supports the range selection.
+  <!-- title -->
+  <div [ngClass]="titleClassName" (click)="toggleTitleOpen()">
+    >
+  </div>
+  <div [ngClass]="titleSectionClassName">
+    <div class="title">1. Description</div>
+    <div class="description-container">
+      <div>
+        In Angular Material 15, the <b>slider component</b> supports the range selection.
+      </div>
+    </div>  
+  </div>
+  
+  <!-- content -->
+  <div [ngClass]="contentClassName" (click)="toggleContentOpen()">
+    >
+  </div>
+  <div [ngClass]="contentSectionClassName">
+    <div class="title">2. How to use Angular Material Slider?</div>
+    <div class="content-container">
+      <pre>
+        <code [innerHTML]="escapeHtml(instruction)"></code>
+      </pre>
+    </div>
+  </div>
+  
+  <!-- demo -->
+  <div [ngClass]="demoClassName" (click)="toggleDemoOpen()">
+    >
+  </div>
+  <div [ngClass]="demoSectionClassName">
+    <div class="title">3. Demo</div>
+    <div class="demo-container">
+      <mat-slider
+        class="example-margin"
+        [disabled]="disabled"
+        [max]="max"
+        [min]="min"
+        [step]="step"
+        [discrete]="thumbLabel"
+        [showTickMarks]="showTicks">
+        <input matSliderStartThumb [(ngModel)]="startValue" #slider>
+        <input matSliderEndThumb [(ngModel)]="endValue" #slider>
+      </mat-slider>
     </div>
   </div>
 
-  <div class="title">2. How to use Angular Material Slider?</div>
-  <div class="content-container">
-    <pre>
-      <code [innerHTML]="escapeHtml(instruction)"></code>
-    </pre>
+  <!-- reference -->
+  <div [ngClass]="referenceClassName" (click)="toggleReferenceOpen()">
+    >
   </div>
-
-  <div class="title">3. Demo</div>
-  <div class="demo-container">
-    <mat-slider
-      class="example-margin"
-      [disabled]="disabled"
-      [max]="max"
-      [min]="min"
-      [step]="step"
-      [discrete]="thumbLabel"
-      [showTickMarks]="showTicks">
-      <input matSliderStartThumb [(ngModel)]="startValue" #slider>
-      <input matSliderEndThumb [(ngModel)]="endValue" #slider>
-    </mat-slider>
-  </div>
-
-  <div class="title">4. Reference</div>
-  <div class="content-container">
-    <ul>
-      <li>
-        <a href="https://material.angular.io/components/slider/examples">
-          Slider
-        </a>
-      </li>
-    </ul>
+  <div [ngClass]="referenceSectionClassName">
+    <div class="title">4. Reference</div>
+    <div class="content-container">
+      <ul>
+        <li>
+          <a href="https://material.angular.io/components/slider/examples">
+            Slider
+          </a>
+        </li>
+      </ul>
+    </div>
   </div>
 
 </div>
