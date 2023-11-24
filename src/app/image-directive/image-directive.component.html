@@ -3,12 +3,36 @@
   <div class="title">1. Description</div>
   <div class="description-container">
     <div>
-      <a href="">NgOptimizedImage</a> ensures that the loading of the Largest Contentful Paint (LCP) image is is prioritized.
+      <a href="">NgOptimizedImage</a> ensures that the loading of the Largest Contentful Paint (LCP) image is is prioritized. 
+      It's developed by Angular team and the <a href="https://developer.chrome.com/blog/introducing-aurora/">Google Aurora team</a>.
     </div>
     <ol>
-      <li>Automatically setting the fetchpriority attribute on the img tag property (default value of <b>fetchpriority</b> is <b>auto</b>)</li>
+      <li>Automatically setting the 
+        <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/fetchPriority">
+          fetchpriority
+        </a>
+         attribute on the img tag property (default value of <b>fetchpriority</b> is <b>auto</b>/<b>priority</b> is <b>false</b>)
+      </li>
       <li>Lazy loading non-priority images by default (default value of <b>loading</b> is <b>lazy</b>)</li>
-      <li>Automatically generating a preconnect link tag in the document head</li>
+      <li>Automatically generating a 
+        <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/rel/preconnect">
+          preconnect
+        </a>
+         link tag in the document head
+         <pre>
+          <code [innerHTML]="escapeHtml(preconnectCode)"></code>
+        </pre>
+      </li>
+      <li>
+        When the <b>priority</b> is <b>true</b>, the 
+        <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/rel/preload">
+          preload
+        </a>
+        link tag will be added in the document head
+        <pre>
+         <code [innerHTML]="escapeHtml(preloadCode)"></code>
+       </pre>
+      </li>
     </ol>
     <div>
       <img ngSrc="1*4IBpfSE-wcflFJ7T0XW8Mg.png" width="800" height="400">

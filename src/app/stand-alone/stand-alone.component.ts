@@ -75,7 +75,9 @@ export class StandAloneComponent extends BaseComponent {
   //3. Update main.ts
   ...,
   bootstrapApplication(AppComponent, {
-    providers: [importProvidersFrom(RouterModule.forRoot(routes))],
+    providers: [
+      provideRouter(routes)
+    ],
   }); 
   `;
 }

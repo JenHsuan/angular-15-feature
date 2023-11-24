@@ -1,0 +1,39 @@
+<div class="base-container">
+  <div class="title">Enable the default Date Format</div>
+  
+  <div class="title">1. Description</div>
+  <div class="description-container">
+    <div>
+      Enable to config the default Date format for the application.
+    </div>
+  </div>
+
+  <div class="title">2. How to use?</div>
+  <div class="content-container">
+    <pre>
+      <code [innerHTML]="escapeHtml(instruction)"></code>
+    </pre>
+  </div>
+
+  <div class="title">3. Demo</div>
+  <div class="demo-container">
+    <div>Original time: {{ dateTime }}</div>
+    <div>Formatted time: {{ dateTime | date }}</div>
+  </div>
+
+  <div class="title">4. Reference</div>
+  <div class="content-container">
+    <ul>
+      <li>
+        <a href="https://stackoverflow.com/questions/56020473/override-angular-default-date-pipe">
+          Override Angular default date pipe
+        </a>
+      </li>
+      <li>
+        <a href="https://angular.io/api/common/DATE_PIPE_DEFAULT_OPTIONS">
+          DATE_PIPE_DEFAULT_OPTIONS
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>

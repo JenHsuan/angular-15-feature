@@ -1,9 +1,6 @@
 import { Component } from '@angular/core';
 import { Router, RouterModule } from '@angular/router';
 import { CommonModule, Location } from '@angular/common';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatSidenavModule} from '@angular/material/sidenav';
-import { BrowserModule } from '@angular/platform-browser';
 
 enum ROUTE_TYPE {
   STAND_ALONE = 'STAND_ALONE',
@@ -14,7 +11,11 @@ enum ROUTE_TYPE {
   AUTHORED_CODE = 'AUTHORED_CODE',
   IGNORED_LIST = 'IGNORED_LIST',
   RANGE_SELECTION_SUPPORT = 'RANGE_SELECTION_SUPPORT',
-  CDK_LIST_BOX = 'CDK_LIST_BOX'
+  CDK_LIST_BOX = 'CDK_LIST_BOX',
+  ESBUILD = 'ESBUILD',
+  LANGUAGE_SERVIVE_IMPROVEMENT = 'LANGUAGE_SERVIVE_IMPROVEMENT',
+  DATE_PIPE = 'DATE_PIPE',
+  FUNTIONAL_ROUTE_GUARDS = 'FUNTIONAL_ROUTE_GUARDS'
 };
 
 const ROUTE_MAP = new Map<string, ROUTE_TYPE>([
@@ -26,7 +27,11 @@ const ROUTE_MAP = new Map<string, ROUTE_TYPE>([
   ['/authored-code', ROUTE_TYPE.AUTHORED_CODE],
   ['/ignored-list', ROUTE_TYPE.IGNORED_LIST],
   ['/range-selection-support', ROUTE_TYPE.RANGE_SELECTION_SUPPORT],
-  ['/cdk-list-box', ROUTE_TYPE.CDK_LIST_BOX]
+  ['/cdk-list-box', ROUTE_TYPE.CDK_LIST_BOX],
+  ['/esbuild', ROUTE_TYPE.ESBUILD],
+  ['/language-service-improvement', ROUTE_TYPE.LANGUAGE_SERVIVE_IMPROVEMENT],
+  ['/date-pipe', ROUTE_TYPE.DATE_PIPE],
+  ['/route-guard', ROUTE_TYPE.FUNTIONAL_ROUTE_GUARDS]
 ]);
 
 @Component({
@@ -38,7 +43,7 @@ const ROUTE_MAP = new Map<string, ROUTE_TYPE>([
 })
 export class AppComponent {
   title = 'Notes of Angular v15';
-  updateTime = '2023/11/23';
+  updateTime = '2023/11/24';
   selectedRoute = ROUTE_TYPE.STAND_ALONE;
   route: string;
 

@@ -1,5 +1,6 @@
-import { NgModule } from '@angular/core';
+import { NgModule, inject } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { LoginService } from './service/login.service';
 
 export const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'standalone'},
@@ -48,6 +49,31 @@ export const routes: Routes = [
     path: 'cdk-list-box',
     loadComponent: () => import('../app/cdk-list-box/cdk-list-box.component').then(m => m.CdkListBoxComponent),
     title: 'Angular 15 - CDK listbox'
+  },
+  {
+    path: 'esbuild',
+    loadComponent: () => import('../app/es-build/es-build.component').then(m => m.EsBuildComponent),
+    title: 'Angular 15 - esbuild'
+  },
+  {
+    path: 'language-service-improvement',
+    loadComponent: () => import('../app/language-service-improvement/language-service-improvement.component').then(m => m.LanguageServiceImprovementComponent),
+    title: 'Angular 15 - Language Service Improvement'
+  },
+  {
+    path: 'date-pipe',
+    loadComponent: () => import('../app/date-pipe/date-pipe.component').then(m => m.DatePipeComponent),
+    title: 'Angular 15 - Date Pipe'
+  },
+  {
+    path: 'route-guard',
+    //Legacy way too add a route guard
+    //canActivate: [ LoginGuardService ],
+
+    //functional route guards
+    canActivate: [() => inject(LoginService).isLoggedIn()],
+    loadComponent: () => import('../app/route-guard-improvement/route-guard-improvement.component').then(m => m.RouteGuardImprovementComponent),
+    title: 'Angular 15 - Functional Route Guard'
   },
 ];
 

@@ -31,4 +31,11 @@ export class ImageDirectiveComponent extends BaseComponent {
   <img ngSrc="1*4IBpfSE-wcflFJ7T0XW8Mg.png" width="800" height="400">
   `;
 
+  preconnectCode = `
+  <link rel="preconnect" href="https://example.com" />
+  `;
+  preloadCode = `
+  <link rel="preload" href="style.css" as="style" />
+  <link rel="preload" href="main.js" as="script" />
+  `;
 }

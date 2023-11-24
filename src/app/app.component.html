@@ -9,7 +9,7 @@
       </div>
       <button [ngClass]="getRouteStyle('STAND_ALONE')"
         mat-button (click)="changeRoute('standalone')">
-        Stand-alone Component
+        Standalone Component
       </button>
       <button [ngClass]="getRouteStyle('DIRECTIVE_COMPOSITION')"
         mat-button (click)="changeRoute('directive')">
@@ -21,7 +21,11 @@
       </button>
       <button [ngClass]="getRouteStyle('ROUTE_UNWRAP_DEFAULT')"
         mat-button (click)="changeRoute('route-unwrap')">
-        Route Remove Default Component
+        Router Syntax Improvement
+      </button>
+      <button [ngClass]="getRouteStyle('FUNTIONAL_ROUTE_GUARDS')"
+        mat-button (click)="changeRoute('route-guard')">
+        Functional Router Guards
       </button>
       <button [ngClass]="getRouteStyle('AUTHORED_CODE')"
         mat-button (click)="changeRoute('authored-code')">
@@ -38,6 +42,18 @@
       <button [ngClass]="getRouteStyle('CDK_LIST_BOX')"
         mat-button (click)="changeRoute('cdk-list-box')">
         Angular CDK 15 - List Box
+      </button>
+      <button [ngClass]="getRouteStyle('ESBUILD')"
+        mat-button (click)="changeRoute('esbuild')">
+        esbuild Supported on the ng build --watch (Experimental Feature)
+      </button>
+      <button [ngClass]="getRouteStyle('LANGUAGE_SERVIVE_IMPROVEMENT')"
+        mat-button (click)="changeRoute('language-service-improvement')">
+        Language Service Improvement
+      </button>
+      <button [ngClass]="getRouteStyle('DATE_PIPE')"
+        mat-button (click)="changeRoute('date-pipe')">
+        Date Pipe
       </button>
       <button [ngClass]="getRouteStyle('NOTES')"
         mat-button (click)="changeRoute('notes')">
