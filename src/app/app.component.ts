@@ -3,6 +3,7 @@ import { Router, RouterModule } from '@angular/router';
 import { CommonModule, Location } from '@angular/common';
 
 enum ROUTE_TYPE {
+  HOME = 'HOME', 
   STAND_ALONE = 'STAND_ALONE',
   NOTES = 'NOTES',
   DIRECTIVE_COMPOSITION = 'DIRECTIVE_COMPOSITION',
@@ -19,6 +20,7 @@ enum ROUTE_TYPE {
 };
 
 const ROUTE_MAP = new Map<string, ROUTE_TYPE>([
+  ['/home', ROUTE_TYPE.HOME],
   ['/standalone', ROUTE_TYPE.STAND_ALONE],
   ['/directive', ROUTE_TYPE.DIRECTIVE_COMPOSITION],
   ['/notes', ROUTE_TYPE.NOTES],
@@ -43,8 +45,8 @@ const ROUTE_MAP = new Map<string, ROUTE_TYPE>([
 })
 export class AppComponent {
   title = 'Notes of Angular v15';
-  updateTime = '2023/11/24';
-  selectedRoute = ROUTE_TYPE.STAND_ALONE;
+  updateTime = '2023/11/27';
+  selectedRoute = ROUTE_TYPE.HOME;
   route: string;
 
   constructor(

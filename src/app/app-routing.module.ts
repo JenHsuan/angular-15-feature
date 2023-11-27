@@ -3,12 +3,17 @@ import { RouterModule, Routes } from '@angular/router';
 import { LoginService } from './service/login.service';
 
 export const routes: Routes = [
-  { path: '', pathMatch: 'full', redirectTo: 'standalone'},
+  { path: '', pathMatch: 'full', redirectTo: 'home'},
+  {
+    path: 'home',
+    loadComponent: () => import('../app/home/home.component').then(m => m.HomeComponent),
+    title: 'Angular 15'
+  },
   //lazy loading
   {
     path: 'standalone',
     loadComponent: () => import('../app/stand-alone/stand-alone.component').then(m => m.StandAloneComponent),
-    title: 'Stand-alone component'
+    title: 'Angular 15 - Standalone component'
   },
   {
     path: 'notes',
