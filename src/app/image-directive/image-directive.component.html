@@ -73,66 +73,70 @@
   <div [ngClass]="contentClassName" (click)="toggleContentOpen()">
     >
   </div>
-  <div class="title">2. How to check if the image is FCP?</div>
-  <div class="lcp-container">
-    <div class="content"></div>
-    <ul>
-      <li>
-        <div>Use small image as the cover page (200 * 100): won't be marked as the LCP</div>
-        <img src="../../assets/image/lcp-small.png" alt="">
-      </li>
-      <li>
-        <div>Use large image as the cover page (2000 * 1000): will be marked as the LCP</div>
-        <img src="../../assets/image/lcp-large.png" alt="">
-      </li>
-    </ul>
-  </div>
-
   <div [ngClass]="contentSectionClassName">
-    <div class="title">3. How to use NgOptimizedImage?</div>
-    <div class="content-container">
-      <ol>
+    <div class="title">2. How to check if the image is FCP?</div>
+    <div class="lcp-container">
+      <div class="content"></div>
+      <ul>
         <li>
-          <div>Basic usage</div>
-          <pre>
-            <code [innerHTML]="escapeHtml(code)"></code>
-          </pre>
-          <div>
-            <img ngSrc="1*4IBpfSE-wcflFJ7T0XW8Mg.png" width="800" height="400">
-          </div>
+          <div>Use small image as the cover page (200 * 100): won't be marked as the LCP</div>
+          <img src="../../assets/image/lcp-small.png" alt="">
         </li>
         <li>
-          Check the 
-          <a href="https://angular.io/api/common/NgOptimizedImage#description">
-            parameters of NgOptimizedImage
-          </a>
+          <div>Use large image as the cover page (2000 * 1000): will be marked as the LCP</div>
+          <img src="../../assets/image/lcp-large.png" alt="">
         </li>
-      </ol>
+      </ul>
     </div>
 
-    <div class="title">4. Optimized strategies for LCP image</div>
-    <div class="description-container">
-      <div>In the development mode, NgOptimizedImage can throw warning message for instructing developers by integrating the 
-        <a href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceObserver">PerformanceObserver API</a>
+    <div [ngClass]="contentSectionClassName">
+      <div class="title">3. How to use NgOptimizedImage?</div>
+      <div class="content-container">
+        <ol>
+          <li>
+            <div>Basic usage</div>
+            <pre>
+              <code [innerHTML]="escapeHtml(code)"></code>
+            </pre>
+            <div>
+              <img ngSrc="1*4IBpfSE-wcflFJ7T0XW8Mg.png" width="800" height="400">
+            </div>
+          </li>
+          <li>
+            Check the 
+            <a href="https://angular.io/api/common/NgOptimizedImage#description">
+              parameters of NgOptimizedImage
+            </a>
+          </li>
+        </ol>
       </div>
-      <img src="../../assets/image/image-directive-warning-message.png" alt="">
-      <div>There are a few things to do when we make sure the image belongs to LCP.</div>
-      <ol>
-        <li>
-          Set <b>priority</b> to <b>true</b>
-        </li>
-        <li>
-          Set <b>loading</b> to <b>auto/eager</b>
-        </li>
-        <li>
-          Add the <b>preload</b> img tag
-        </li>
-        <li>
-          Set the <b>srcset</b> (<a href="https://blog.twitter.com/engineering/en_us/topics/infrastructure/2019/capping-image-fidelity-on-ultra-high-resolution-devices#:~:text=3x%20resolution%20screens%20are%20wasteful">Descriptors higher than 2x are generally not recommended</a>)
-        </li>
-      </ol>
+
+      <div class="title">4. Optimized strategies for LCP image</div>
+      <div class="description-container">
+        <div>In the development mode, NgOptimizedImage can throw warning message for instructing developers by integrating the 
+          <a href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceObserver">PerformanceObserver API</a>
+        </div>
+        <img src="../../assets/image/image-directive-warning-message.png" alt="">
+        <div>There are a few things to do when we make sure the image belongs to LCP.</div>
+        <ol>
+          <li>
+            Set <b>priority</b> to <b>true</b>
+          </li>
+          <li>
+            Set <b>loading</b> to <b>auto/eager</b>
+          </li>
+          <li>
+            Add the <b>preload</b> img tag
+          </li>
+          <li>
+            Set the <b>srcset</b> (<a href="https://blog.twitter.com/engineering/en_us/topics/infrastructure/2019/capping-image-fidelity-on-ultra-high-resolution-devices#:~:text=3x%20resolution%20screens%20are%20wasteful">Descriptors higher than 2x are generally not recommended</a>)
+          </li>
+        </ol>
+      </div>
     </div>
   </div>
+    
+  
 
   <!-- reference -->
   <div [ngClass]="referenceClassName" (click)="toggleReferenceOpen()">
