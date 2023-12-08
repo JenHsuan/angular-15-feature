@@ -57,7 +57,7 @@
           <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/rel/preload">
             preload
           </a>
-          link tag will be added in the document head (only for <a href="https://github.com/angular/angular/pull/47343">Angular Universal</a>)
+          link tag will be added in the document head (only for <a href="https://github.com/angular/angular/pull/47343">Angular Universal, the Angular SSR solution</a>)
           <pre>
            <code [innerHTML]="escapeHtml(preloadCode)"></code>
          </pre>
@@ -76,7 +76,6 @@
   <div [ngClass]="contentSectionClassName">
     <div class="title">2. How to check if the image is FCP?</div>
     <div class="lcp-container">
-      <div class="content"></div>
       <ul>
         <li>
           <div>Use small image as the cover page (200 * 100): won't be marked as the LCP</div>
@@ -133,17 +132,62 @@
           </li>
         </ol>
       </div>
+
+      <div class="title">5. preconnect</div>
+      <div class="description-container">
+        <ul>
+          <li>
+            <div>
+              The preconnect tage will provide a benefit to any future cross-origin HTTP request, navigation or subresource. It has no benefit on same-origin requests because the connection is already open.
+              <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/rel/preconnect">
+                (reference)
+              </a>
+            </div>
+          </li>
+          <li>
+            <div>
+              The run-trip time (RTT) before the connection is established can be reduced.
+              <a href="https://www.igvita.com/2015/08/17/eliminating-roundtrips-with-preconnect/">
+                (reference)
+              </a>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="preconnect-container">
+        <img src="../../assets/image/preconnect.webp" alt="">
+      </div>
+
+      <div class="title">6. preload</div>
+      <div class="description-container">
+        <div>There are a few benefits for using the preload tag</div>
+        <a href="https://medium.com/a-layman/how-browser-works-when-rendering-a-web-page-f49c09bec475">
+          (reference)
+        </a>
+        <ol>
+          <li>
+            The browser will increase the priority for the resource fetching.
+          </li>
+          <li>
+            The browser fetches the resources for the current needed. The critical resource and navigation requests will be canceled for the current page’s unload.
+          </li>
+          <li>
+            The browser will download the resource when the browser is available.
+          </li>
+          <li>
+            The browser saves it in the HTTP cache if the resource is cacheable. The resource will be saved in the memory cache if it’s not cacheable.
+          </li>
+        </ol>
+      </div>
     </div>
   </div>
-    
-  
 
   <!-- reference -->
   <div [ngClass]="referenceClassName" (click)="toggleReferenceOpen()">
     >
   </div>
   <div [ngClass]="referenceSectionClassName">
-    <div class="title">5. Reference</div>
+    <div class="title">7. Reference</div>
     <div class="content-container">
       <ul>
         <li>
@@ -189,6 +233,16 @@
         <li>
           <a href="https://www.twicpics.com/blog/how-to-find-the-lcp-element-a-complete-guide">
             How to find the Largest Contentful Paint element? A complete guide.
+          </a>
+        </li>
+        <li>
+          <a href="https://www.igvita.com/2015/08/17/eliminating-roundtrips-with-preconnect/">
+            Eliminating Roundtrips with Preconnect
+          </a>
+        </li>
+        <li>
+          <a href="https://pvt5r486.github.io/f2e/20190809/2128364955/">
+            [從 0 開始的 Angular 生活]No.52 使用 Angular Universal 讓網站 SEO 提升
           </a>
         </li>
       </ul>

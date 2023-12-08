@@ -45,7 +45,7 @@ const ROUTE_MAP = new Map<string, ROUTE_TYPE>([
 })
 export class AppComponent {
   title = 'Notes of Angular v15';
-  updateTime = '2023/11/27';
+  updateTime = '2023/12/05';
   selectedRoute = ROUTE_TYPE.HOME;
   route: string;
 
