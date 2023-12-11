@@ -4,14 +4,14 @@ import { AppModule } from './app/app.module';
 import { bootstrapApplication } from '@angular/platform-browser';
 import { AppComponent } from './app/app.component';
 import { importProvidersFrom } from '@angular/core';
-import { RouterModule, provideRouter } from '@angular/router';
+import { RouterModule, provideRouter, withHashLocation } from '@angular/router';
 import { routes } from './app/app-routing.module';
 import { DATE_PIPE_DEFAULT_OPTIONS } from '@angular/common';
 
 bootstrapApplication(AppComponent, {
   providers: [
     //route routing module
-    provideRouter(routes),
+    provideRouter(routes, withHashLocation()),
 
     //defualt date format
     {
