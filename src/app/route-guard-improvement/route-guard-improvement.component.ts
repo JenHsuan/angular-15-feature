@@ -1,15 +1,18 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { BaseComponent } from '../base/base.component';
+import { escapeHtml } from '../public/utils/utils';
+import { SectionContainerComponent } from '../public/section-container/section-container.component';
 
 @Component({
   selector: 'app-route-guard-improvement',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, SectionContainerComponent],
   templateUrl: './route-guard-improvement.component.html',
   styleUrls: ['./route-guard-improvement.component.scss']
 })
-export class RouteGuardImprovementComponent extends BaseComponent {
+export class RouteGuardImprovementComponent {
+  escapeHtml = escapeHtml;
+  
   code = `
   //1. Create the service for logging in
   ng g s login

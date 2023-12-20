@@ -1,15 +1,17 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { BaseComponent } from '../base/base.component';
 import { DirectiveCompositionApiNormalComponent } from './directive-composition-api-normal/directive-composition-api-normal.component';
 import { DirectiveCompositionApiDirectiveBgColorDirective } from './directive-composition-api-directive-bg-color/directive-composition-api-directive-bg-color.directive';
 import { DirectiveCompositionApiAppliedComponent } from './directive-composition-api-applied/directive-composition-api-applied.component';
+import { SectionContainerComponent } from '../public/section-container/section-container.component';
+import { escapeHtml } from '../public/utils/utils';
 
 @Component({
   selector: 'app-directive-composition-api',
   standalone: true,
   imports: [
     CommonModule,
+    SectionContainerComponent,
     DirectiveCompositionApiNormalComponent,
     DirectiveCompositionApiAppliedComponent,
     DirectiveCompositionApiDirectiveBgColorDirective
@@ -17,7 +19,9 @@ import { DirectiveCompositionApiAppliedComponent } from './directive-composition
   templateUrl: './directive-composition-api.component.html',
   styleUrls: ['./directive-composition-api.component.scss']
 })
-export class DirectiveCompositionApiComponent extends BaseComponent {
+export class DirectiveCompositionApiComponent {
+  escapeHtml = escapeHtml;
+  
   codeForDirective = `
   //1. Create a stand-alone component and a stand-alone directive
   

@@ -2,29 +2,23 @@
   <div class="title">Routing List improvement</div>
 
   <!-- title -->
-<div [ngClass]="titleClassName" (click)="toggleTitleOpen()">
-    >
-  </div>
-  <div [ngClass]="titleSectionClassName">
+  <app-section-container>
     <div class="title">1. Description</div>
     <div class="description-container">
       <div>
         In the routing module, the code for <b>loadComponent</b> can be refactored that we won't have to specify the default component
       </div>
     </div>
-  </div>
+  </app-section-container>
   
   <!-- content -->
-  <div [ngClass]="contentClassName" (click)="toggleContentOpen()">
-    >
-  </div>
-  <div [ngClass]="contentSectionClassName">
+  <app-section-container>
     <div class="title">2. How to use?</div>
     <div class="content-container">
       <pre>
         <code [innerHTML]="escapeHtml(code)"></code>
       </pre>
     </div>
-  </div>
+  </app-section-container>
   
 </div>

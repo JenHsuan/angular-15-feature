@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { BaseComponent } from '../base/base.component';
 import {JsonPipe} from '@angular/common';
 import {CdkListbox, CdkOption} from '@angular/cdk/listbox';
+import { SectionContainerComponent } from '../public/section-container/section-container.component';
+import { escapeHtml } from '../public/utils/utils';
 
 const today = new Date();
 
@@ -16,11 +17,13 @@ const formatter = new Intl.DateTimeFormat(undefined, {
 @Component({
   selector: 'app-cdk-list-box',
   standalone: true,
-  imports: [CommonModule, CdkListbox, CdkOption, JsonPipe],
+  imports: [CommonModule, SectionContainerComponent, CdkListbox, CdkOption, JsonPipe],
   templateUrl: './cdk-list-box.component.html',
   styleUrls: ['./cdk-list-box.component.scss']
 })
-export class CdkListBoxComponent extends BaseComponent {
+export class CdkListBoxComponent {
+  escapeHtml = escapeHtml;
+  
   slots = [12, 13, 14, 15].map(
     hour => new Date(today.getFullYear(), today.getMonth(), today.getDate() + 1, hour),
   );

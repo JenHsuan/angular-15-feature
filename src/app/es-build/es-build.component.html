@@ -2,10 +2,7 @@
   <div class="title">esbuild improvement</div>
   
   <!-- title -->
-  <div [ngClass]="titleClassName" (click)="toggleTitleOpen()">
-    >
-  </div>
-  <div [ngClass]="titleSectionClassName">
+  <app-section-container>
     <div class="title">1. Description</div>
     <div class="description-container">
       <div>
@@ -23,29 +20,23 @@
         <li>ng build --watch</li>
       </ol>
     </div>
-  </div>
+  </app-section-container>
 
   <!-- content -->
-  <div [ngClass]="contentClassName" (click)="toggleContentOpen()">
-    >
-  </div>
-  <div [ngClass]="contentSectionClassName">
+  <app-section-container>
     <div class="title">2. How to use?</div>
     <div class="content-container">
       <pre>
         <code [innerHTML]="steps"></code>
       </pre>
     </div>
-  </div>
+  </app-section-container>
 
   <!-- demo -->
-  <div [ngClass]="demoClassName" (click)="toggleDemoOpen()">
-    >
-  </div>
-  <div [ngClass]="demoSectionClassName">
+  <app-section-container>
     <div class="title">3. Demo</div>
     <div class="demo-container">
       <img src="../../assets/image/esbuild-watch-demo.png" alt="">
     </div>
-  </div>
+  </app-section-container>
 </div>

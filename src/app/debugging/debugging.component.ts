@@ -1,14 +1,14 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { BaseComponent } from '../base/base.component';
+import { SectionContainerComponent } from '../public/section-container/section-container.component';
 
 @Component({
   selector: 'app-debugging',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, SectionContainerComponent],
   templateUrl: './debugging.component.html',
   styleUrls: ['./debugging.component.scss']
 })
-export class DebuggingComponent extends BaseComponent {
+export class DebuggingComponent {
 
 }

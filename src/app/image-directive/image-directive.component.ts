@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { CommonModule, NgOptimizedImage, provideImgixLoader } from '@angular/common';
-import { BaseComponent } from '../base/base.component';
+import { SectionContainerComponent } from '../public/section-container/section-container.component';
+import { escapeHtml } from '../public/utils/utils';
 
 @Component({
   selector: 'app-image-directive',
   standalone: true,
-  imports: [CommonModule, NgOptimizedImage],
+  imports: [CommonModule, NgOptimizedImage, SectionContainerComponent],
   // Call the function and add the result to the `providers` array:
   providers: [
     provideImgixLoader("https://cdn-images-1.medium.com/"),
@@ -13,7 +14,9 @@ import { BaseComponent } from '../base/base.component';
   templateUrl: './image-directive.component.html',
   styleUrls: ['./image-directive.component.scss']
 })
-export class ImageDirectiveComponent extends BaseComponent {
+export class ImageDirectiveComponent {
+  escapeHtml = escapeHtml;
+  
   code = `
   //1. import NgOptimizedImage and set the provideImgixLoader
   

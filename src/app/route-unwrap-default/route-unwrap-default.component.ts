@@ -1,15 +1,18 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { BaseComponent } from '../base/base.component';
+import { escapeHtml } from '../public/utils/utils';
+import { SectionContainerComponent } from '../public/section-container/section-container.component';
 
 @Component({
   selector: 'app-route-unwrap-default',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, SectionContainerComponent],
   templateUrl: './route-unwrap-default.component.html',
   styleUrls: ['./route-unwrap-default.component.scss']
 })
-export default class RouteUnwrapDefaultComponent extends BaseComponent {
+export default class RouteUnwrapDefaultComponent {
+  escapeHtml = escapeHtml;
+  
   code = `
   //The oririnal way to add a new route
   {

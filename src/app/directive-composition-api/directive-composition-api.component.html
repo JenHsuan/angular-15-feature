@@ -2,10 +2,7 @@
   <div class="title">Directive Composistion API</div>
 
   <!-- title -->
-  <div [ngClass]="titleClassName" (click)="toggleTitleOpen()">
-    >
-  </div>
-  <div [ngClass]="titleSectionClassName">
+  <app-section-container>
     <div class="title">1. Description</div>
     <div class="description-container">
       <div>
@@ -20,13 +17,10 @@
         <li>The component has to be a stand-alone component</li>
       </ol>
     </div>
-  </div>
+  </app-section-container>
 
   <!-- content -->
-  <div [ngClass]="contentClassName" (click)="toggleContentOpen()">
-    >
-  </div>
-  <div [ngClass]="contentSectionClassName">
+  <app-section-container>
     <div class="title">2. Create a simple directives (change the background color)</div>
     <div class="content-container">
       <pre>
@@ -49,13 +43,10 @@
     <div class="demo-container"> 
       <app-directive-composition-api-applied backgroundColor="red"></app-directive-composition-api-applied>
     </div>
-  </div>
+  </app-section-container>
 
   <!-- reference -->
-  <div [ngClass]="referenceClassName" (click)="toggleReferenceOpen()">
-    >
-  </div>
-  <div [ngClass]="referenceSectionClassName">
+  <app-section-container>
     <div class="title">4. Reference</div>
     <div class="content-container">
       <ul>
@@ -66,5 +57,5 @@
         </li>
       </ul>
     </div>
-  </div>
+  </app-section-container>
 </div>

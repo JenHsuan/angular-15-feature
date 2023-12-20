@@ -1,10 +1,7 @@
 <div class="base-container">
   <div class="title">Angular CDK listbox</div>
   <!-- title -->
-  <div [ngClass]="titleClassName" (click)="toggleTitleOpen()">
-    >
-  </div>
-  <div [ngClass]="titleSectionClassName">
+  <app-section-container>
     <div class="title">1. Description</div>
     <div class="description-container">
       <div>
@@ -25,26 +22,20 @@
         </li>
       </ul>
     </div>  
-  </div>
+  </app-section-container>>
 
   <!-- content -->
-  <div [ngClass]="contentClassName" (click)="toggleContentOpen()">
-    >
-  </div>
-  <div [ngClass]="contentSectionClassName">
+  <app-section-container>
     <div class="title">2. How to use Angular Material Slider?</div>
     <div class="content-container">
       <pre>
         <code [innerHTML]="escapeHtml(instruction)"></code>
       </pre>
     </div>  
-  </div>
+  </app-section-container>
 
   <!-- demo -->
-  <div [ngClass]="demoClassName" (click)="toggleDemoOpen()">
-    >
-  </div>
-  <div [ngClass]="demoSectionClassName">
+  <app-section-container>
     <div class="title">3. Demo</div>
     <div class="demo-container">
       <div class="example-listbox-container">
@@ -66,13 +57,10 @@
         Your appointment is scheduled for <strong>{{formatAppointment() | json}}</strong>&nbsp;
       </p>
     </div>  
-  </div>
+  </app-section-container>
 
   <!-- reference -->
-  <div [ngClass]="referenceClassName" (click)="toggleReferenceOpen()">
-    >
-  </div>
-  <div [ngClass]="referenceSectionClassName">
+  <app-section-container>
     <div class="title">4. Reference</div>
     <div class="content-container">
       <ul>
@@ -88,6 +76,6 @@
         </li>
       </ul>
     </div>
-  </div>
+  </app-section-container>
 
 </div>

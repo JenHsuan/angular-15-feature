@@ -1,9 +1,7 @@
 <div class="base-container">
   <div class="title">Stand-alone component</div>
-  <div [ngClass]="titleClassName" (click)="toggleTitleOpen()">
-    >
-  </div>
-  <div [ngClass]="titleSectionClassName">
+  
+  <app-section-container>
     <div class="title">1. Description</div>
     <div class="description-container">
       <div>
@@ -18,12 +16,9 @@
         <li>The stand-alone component can be lazy loaded</li>
       </ol>
     </div>
-  </div>
-
-  <div [ngClass]="contentClassName" (click)="toggleContentOpen()">
-    >
-  </div>
-  <div [ngClass]="contentSectionClassName">
+  </app-section-container>
+  
+  <app-section-container>
     <div class="title">2. How to Create a stand-alone component using CLI?</div>
     <div class="content-container">
       <code [innerHTML]="escapeHtml(stanaloneInstruction)"></code>
@@ -42,18 +37,15 @@
         <code [innerHTML]="escapeHtml(removeModuleCode)"></code>
       </pre>
     </div>
-  </div>
+  </app-section-container>
 
-  <div [ngClass]="demoClassName" (click)="toggleDemoOpen()">
-    >
-  </div>
-  <div [ngClass]="demoSectionClassName">
+  <app-section-container>
     <div class="title">5. Demo</div>
     <div class="demo-container"> 
       <ng-container *ngFor="let index of [1, 2, 3, 4, 5]">
         <app-stand-alone-item [index]="index"></app-stand-alone-item>
       </ng-container>
     </div>
-  </div>
+  </app-section-container>
 
 </div>

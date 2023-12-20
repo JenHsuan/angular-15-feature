@@ -1,21 +1,26 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatSliderModule } from '@angular/material/slider';
-import { BaseComponent } from '../base/base.component';
 import { FormsModule } from '@angular/forms';
+import { SectionContainerComponent } from '../public/section-container/section-container.component';
+import { escapeHtml } from '../public/utils/utils';
 
 @Component({
   selector: 'app-range-selection-support',
   standalone: true,
   imports: [
     CommonModule, 
+    SectionContainerComponent,
     FormsModule,
     MatSliderModule
   ],
   templateUrl: './range-selection-support.component.html',
   styleUrls: ['./range-selection-support.component.scss']
 })
-export class RangeSelectionSupportComponent extends BaseComponent {
+export class RangeSelectionSupportComponent {
+  escapeHtml = escapeHtml;
+
+  
   disabled = false;
   max = 100;
   min = 0;

@@ -2,27 +2,21 @@
   <div class="title">Language Service Improvement</div>
   
   <!-- title -->
-  <div [ngClass]="titleClassName" (click)="toggleTitleOpen()">
-    >
-  </div>
-  <div [ngClass]="titleSectionClassName">
+  <app-section-container>
     <div class="title">1. Description</div>
     <div class="description-container">
       <div>
         In the component, the language service could import the corresponding component used in the <b>template</b> 
       </div>
     </div>
-  </div>
+  </app-section-container>
     
   <!-- demo -->
-  <div [ngClass]="demoClassName" (click)="toggleDemoOpen()">
-    >
-  </div>
-  <div [ngClass]="demoSectionClassName">
+  <app-section-container>
     <div class="title">2. Demo</div>
     <div class="demo-container">
       <img src="../../assets/image/language-service-demo.png" alt="">
     </div>
-  </div>
+  </app-section-container>
 
 </div>

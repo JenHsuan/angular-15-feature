@@ -1,17 +1,19 @@
 import { Component } from '@angular/core';
 import { CommonModule, DATE_PIPE_DEFAULT_OPTIONS } from '@angular/common';
-import { BaseComponent } from '../base/base.component';
+import { SectionContainerComponent } from '../public/section-container/section-container.component';
+import { escapeHtml } from '../public/utils/utils';
 
 @Component({
   selector: 'app-date-pipe',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, SectionContainerComponent],
   templateUrl: './date-pipe.component.html',
   styleUrls: ['./date-pipe.component.scss'],
   providers: [
   ]
 })
-export class DatePipeComponent extends BaseComponent {
+export class DatePipeComponent {
+  escapeHtml = escapeHtml;
   dateTime = new Date();
   instruction = `
   //1. Update the main.ts to provide the deefault datetime format

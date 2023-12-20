@@ -1,16 +1,19 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { StandAloneItemComponent } from './stand-alone-item/stand-alone-item.component';
-import { BaseComponent } from '../base/base.component';
+import { SectionContainerComponent } from '../public/section-container/section-container.component';
+import { escapeHtml } from '../public/utils/utils';
 
 @Component({
   selector: 'app-stand-alone',
   standalone: true,
-  imports: [CommonModule, StandAloneItemComponent],
+  imports: [CommonModule, StandAloneItemComponent, SectionContainerComponent],
   templateUrl: './stand-alone.component.html',
   styleUrls: ['./stand-alone.component.scss']
 })
-export class StandAloneComponent extends BaseComponent {
+export class StandAloneComponent {
+  escapeHtml = escapeHtml;
+  
   instruction = `
   npx @angular/cli@14 new Angular14Project
   `;
