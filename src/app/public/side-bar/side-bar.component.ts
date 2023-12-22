@@ -11,15 +11,24 @@ import { Router } from '@angular/router';
   styleUrls: ['./side-bar.component.scss']
 })
 export class SideBarComponent {
-  title = 'Notes of Angular v17';
-  updateTime = '2023/12/20';
+  title = 'Notes of Angular v15';
+  updateTime = '2023/12/05';
   selectedRoute = ROUTE_TYPE.HOME;
   route: string;
 
   sideBarList = [
+    ROUTE_TYPE.STAND_ALONE,
+    ROUTE_TYPE.DIRECTIVE_COMPOSITION,
+    ROUTE_TYPE.IMAGE_DIRECTIVE,
+    ROUTE_TYPE.ROUTE_UNWRAP_DEFAULT,
+    ROUTE_TYPE.FUNTIONAL_ROUTE_GUARDS,
+    ROUTE_TYPE.IGNORED_LIST,
+    ROUTE_TYPE.RANGE_SELECTION_SUPPORT,
+    ROUTE_TYPE.CDK_LIST_BOX,
+    ROUTE_TYPE.ESBUILD,
+    ROUTE_TYPE.LANGUAGE_SERVIVE_IMPROVEMENT,
+    ROUTE_TYPE.DATE_PIPE,
     ROUTE_TYPE.NOTES,
-    ROUTE_TYPE.FLOW_CONTROL,
-    ROUTE_TYPE.DEFERRABLE_VIEWS,
     ROUTE_TYPE.BREAKING_CHANGE,
     ROUTE_TYPE.DEPRECATIONS,
     ROUTE_TYPE.DOCUMENTS

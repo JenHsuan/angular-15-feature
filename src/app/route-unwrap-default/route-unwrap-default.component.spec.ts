@@ -1,6 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { RouteUnwrapDefaultComponent } from './route-unwrap-default.component';
+import RouteUnwrapDefaultComponent from './route-unwrap-default.component';
 
 describe('RouteUnwrapDefaultComponent', () => {
   let component: RouteUnwrapDefaultComponent;

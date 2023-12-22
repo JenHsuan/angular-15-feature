@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule, DATE_PIPE_DEFAULT_OPTIONS } from '@angular/common';
 import { SectionContainerComponent } from '../public/section-container/section-container.component';
 import { escapeHtml } from '../public/utils/utils';
+import { ROUTE_TYPE, TYPE_TITLE_MAP } from '../public/route/route.domain';
 
 @Component({
   selector: 'app-date-pipe',
@@ -13,6 +14,8 @@ import { escapeHtml } from '../public/utils/utils';
   ]
 })
 export class DatePipeComponent {
+  title = TYPE_TITLE_MAP.get(ROUTE_TYPE.DATE_PIPE);
+
   escapeHtml = escapeHtml;
   dateTime = new Date();
   instruction = `

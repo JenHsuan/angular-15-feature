@@ -4,6 +4,7 @@ import { MatSliderModule } from '@angular/material/slider';
 import { FormsModule } from '@angular/forms';
 import { SectionContainerComponent } from '../public/section-container/section-container.component';
 import { escapeHtml } from '../public/utils/utils';
+import { ROUTE_TYPE, TYPE_TITLE_MAP } from '../public/route/route.domain';
 
 @Component({
   selector: 'app-range-selection-support',
@@ -18,9 +19,9 @@ import { escapeHtml } from '../public/utils/utils';
   styleUrls: ['./range-selection-support.component.scss']
 })
 export class RangeSelectionSupportComponent {
+  title = TYPE_TITLE_MAP.get(ROUTE_TYPE.RANGE_SELECTION_SUPPORT);
   escapeHtml = escapeHtml;
 
-  
   disabled = false;
   max = 100;
   min = 0;

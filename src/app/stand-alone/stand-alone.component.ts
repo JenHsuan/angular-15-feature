@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { StandAloneItemComponent } from './stand-alone-item/stand-alone-item.component';
 import { SectionContainerComponent } from '../public/section-container/section-container.component';
 import { escapeHtml } from '../public/utils/utils';
+import { ROUTE_TYPE, TYPE_TITLE_MAP } from '../public/route/route.domain';
 
 @Component({
   selector: 'app-stand-alone',
@@ -12,6 +13,7 @@ import { escapeHtml } from '../public/utils/utils';
   styleUrls: ['./stand-alone.component.scss']
 })
 export class StandAloneComponent {
+  title = TYPE_TITLE_MAP.get(ROUTE_TYPE.STAND_ALONE);
   escapeHtml = escapeHtml;
   
   instruction = `

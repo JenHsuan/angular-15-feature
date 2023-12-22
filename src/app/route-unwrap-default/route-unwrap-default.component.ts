@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { escapeHtml } from '../public/utils/utils';
 import { SectionContainerComponent } from '../public/section-container/section-container.component';
+import { ROUTE_TYPE, TYPE_TITLE_MAP } from '../public/route/route.domain';
 
 @Component({
   selector: 'app-route-unwrap-default',
@@ -11,6 +12,7 @@ import { SectionContainerComponent } from '../public/section-container/section-c
   styleUrls: ['./route-unwrap-default.component.scss']
 })
 export default class RouteUnwrapDefaultComponent {
+  title = TYPE_TITLE_MAP.get(ROUTE_TYPE.ROUTE_UNWRAP_DEFAULT);
   escapeHtml = escapeHtml;
   
   code = `

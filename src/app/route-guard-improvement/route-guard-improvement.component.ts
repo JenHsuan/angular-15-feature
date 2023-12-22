@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { escapeHtml } from '../public/utils/utils';
 import { SectionContainerComponent } from '../public/section-container/section-container.component';
+import { ROUTE_TYPE, TYPE_TITLE_MAP } from '../public/route/route.domain';
 
 @Component({
   selector: 'app-route-guard-improvement',
@@ -11,6 +12,7 @@ import { SectionContainerComponent } from '../public/section-container/section-c
   styleUrls: ['./route-guard-improvement.component.scss']
 })
 export class RouteGuardImprovementComponent {
+  title = TYPE_TITLE_MAP.get(ROUTE_TYPE.FUNTIONAL_ROUTE_GUARDS);
   escapeHtml = escapeHtml;
   
   code = `

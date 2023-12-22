@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule, NgOptimizedImage, provideImgixLoader } from '@angular/common';
 import { SectionContainerComponent } from '../public/section-container/section-container.component';
 import { escapeHtml } from '../public/utils/utils';
+import { ROUTE_TYPE, TYPE_TITLE_MAP } from '../public/route/route.domain';
 
 @Component({
   selector: 'app-image-directive',
@@ -15,6 +16,7 @@ import { escapeHtml } from '../public/utils/utils';
   styleUrls: ['./image-directive.component.scss']
 })
 export class ImageDirectiveComponent {
+  title = TYPE_TITLE_MAP.get(ROUTE_TYPE.IMAGE_DIRECTIVE);
   escapeHtml = escapeHtml;
   
   code = `

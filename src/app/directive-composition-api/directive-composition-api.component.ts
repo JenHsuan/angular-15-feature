@@ -5,6 +5,7 @@ import { DirectiveCompositionApiDirectiveBgColorDirective } from './directive-co
 import { DirectiveCompositionApiAppliedComponent } from './directive-composition-api-applied/directive-composition-api-applied.component';
 import { SectionContainerComponent } from '../public/section-container/section-container.component';
 import { escapeHtml } from '../public/utils/utils';
+import { ROUTE_TYPE, TYPE_TITLE_MAP } from '../public/route/route.domain';
 
 @Component({
   selector: 'app-directive-composition-api',
@@ -20,6 +21,7 @@ import { escapeHtml } from '../public/utils/utils';
   styleUrls: ['./directive-composition-api.component.scss']
 })
 export class DirectiveCompositionApiComponent {
+  title = TYPE_TITLE_MAP.get(ROUTE_TYPE.DIRECTIVE_COMPOSITION);
   escapeHtml = escapeHtml;
   
   codeForDirective = `

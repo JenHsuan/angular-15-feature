@@ -4,6 +4,7 @@ import {JsonPipe} from '@angular/common';
 import {CdkListbox, CdkOption} from '@angular/cdk/listbox';
 import { SectionContainerComponent } from '../public/section-container/section-container.component';
 import { escapeHtml } from '../public/utils/utils';
+import { ROUTE_TYPE, TYPE_TITLE_MAP } from '../public/route/route.domain';
 
 const today = new Date();
 
@@ -22,6 +23,7 @@ const formatter = new Intl.DateTimeFormat(undefined, {
   styleUrls: ['./cdk-list-box.component.scss']
 })
 export class CdkListBoxComponent {
+  title = TYPE_TITLE_MAP.get(ROUTE_TYPE.CDK_LIST_BOX);
   escapeHtml = escapeHtml;
   
   slots = [12, 13, 14, 15].map(

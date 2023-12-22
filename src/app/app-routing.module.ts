@@ -80,6 +80,21 @@ export const routes: Routes = [
     loadComponent: () => import('../app/route-guard-improvement/route-guard-improvement.component').then(m => m.RouteGuardImprovementComponent),
     title: 'Angular 15 - Functional Route Guard'
   },
+  {
+    path: 'breaking-changes',
+    loadComponent: () => import('../app/breaking-changes/breaking-changes.component'),
+    title: 'Angular 16 - breaking changes'
+  },
+  {
+    path: 'deprecations',
+    loadComponent: () => import('../app/deprecations/deprecations.component'),
+    title: 'Angular 16 - deprecations'
+  },
+  {
+    path: 'documents',
+    loadComponent: () => import('../app/documents/documents.component'),
+    title: 'Angular 16 - documents'
+  }
 ];
 
 @NgModule({
